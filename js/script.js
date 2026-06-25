@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     // ==================== ГАМБУРГЕР МЕНЮ ====================
     $('#hamburger').on('click', function() {
         $('#myTopnav').toggleClass('responsive');
@@ -22,7 +21,6 @@ $(document).ready(function() {
     function showReview(index) {
         reviews.removeClass('active');
         controls.removeClass('active');
-
         $(reviews[index]).addClass('active');
         $(controls[index]).addClass('active');
     }
@@ -43,5 +41,4 @@ $(document).ready(function() {
     if (reviews.length > 0) {
         showReview(0);
     }
-
 });
