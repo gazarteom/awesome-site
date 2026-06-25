@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My very first page</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <nav id="myTopnav">
+        <img src="img/fort-icon.png" alt="Логотип сайта">
+        <div id="hamburger" class="icon">&#9776;</div>
+        <ul>
+          <li><a href="#top" class="menu-element" data-link="top">Главная</a></li>
+          <li><a href="#services" class="menu-element" data-link="services">Общее</a></li>
+          <li><a href="#portfolio" class="menu-element" data-link="portfolio">Портфолио</a></li>
+          <li><a href="#reviews" class="menu-element" data-link="reviews">Отзывы</a></li>
+          <li><a href="contacts.html" class="menu-element">Контакты</a></li>
+          <li><a href="blog.html" class="menu-element">Блог</a></li>
+          <li><a href="gallery.html" class="menu-element">Галерея</a></li>
+          <li><a href="shop.html" class="menu-element">Магазин</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="top">
+        <img class="top-image" src="img/1.jpg" alt="Обложка страницы">
+      </section>
+
+      <section class="services" id="services">
+        <h1 class="main-title">Наши возможности</h1>
+        <div class="delimiter"></div>
+        <p class="main-title-description">Описание наших услуг</p>
+        <div class="services-container">
+          <div class="container-row">
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>Web Design</h2><p>Lorem ipsum dolor.</p></div>
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>Development</h2><p>Lorem ipsum dolor.</p></div>
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>Branding</h2><p>Lorem ipsum dolor.</p></div>
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>Marketing</h2><p>Lorem ipsum dolor.</p></div>
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>Mobile Apps</h2><p>Lorem ipsum dolor.</p></div>
+             <div class="row-item"><img class="item-img" src="img/icon-1.png" alt=""><h2>SEO</h2><p>Lorem ipsum dolor.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overlay black-back">
+          <h2 class="main-title">Подробности</h2>
+          <div class="delimiter"></div>
+          <p class="main-title-description">Узнайте больше о нашей работе</p>
+          <button class="common-button" type="button">Узнать</button>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <h2 class="main-title">Наши работы</h2>
+        <div class="delimiter"></div>
+        <p class="main-title-description">Кликните на фото для просмотра</p>
+
+        <div class="portfolio-container">
+            <div class="portfolio-item" style="background-image: url('img/portfolio/2.jpg')"><div class="description-container"><p class="portfolio-title">Проект 1</p></div></div>
+            <div class="portfolio-item" style="background-image: url('img/portfolio/3.jpg')"><div class="description-container"><p class="portfolio-title">Проект 2</p></div></div>
+            <div class="portfolio-item" style="background-image: url('img/portfolio/4.jpg')"><div class="description-container"><p class="portfolio-title">Проект 3</p></div></div>
+            <div class="portfolio-item" style="background-image: url('img/portfolio/5.jpg')"><div class="description-container"><p class="portfolio-title">Проект 4</p></div></div>
+            <div class="portfolio-item" style="background-image: url('img/portfolio/6.jpg')"><div class="description-container"><p class="portfolio-title">Проект 5</p></div></div>
+            <div class="portfolio-item" style="background-image: url('img/portfolio/7.jpg')"><div class="description-container"><p class="portfolio-title">Проект 6</p></div></div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+          <h2 class="main-title">Отзывы клиентов</h2>
+          <div class="delimiter"></div>
+
+          <div class="reviews-wrapper">
+              <div class="review-card active">
+                  <img src="img/c1.jpg" alt="Client" class="client-photo">
+                  <h3>Иван Иванов</h3>
+                  <p>"Отличная работа! Сайт был сделан быстро и качественно. Рекомендую всем!"</p>
+              </div>
+
+              <div class="review-card">
+                  <img src="img/c2.jpg" alt="Client" class="client-photo">
+                  <h3>Петр Петров</h3>
+                  <p>"Профессиональный подход к делу. Дизайн просто супер, адаптивность на высоте."</p>
+              </div>
+
+              <div class="review-card">
+                  <img src="img/c3.jpg" alt="Client" class="client-photo">
+                  <h3>Анна Смирнова</h3>
+                  <p>"Спасибо за сотрудничество. Все пожелания были учтены, результатом довольна."</p>
+              </div>
+          </div>
+
+          <div class="review-controls">
+              <div class="control-item active"></div>
+              <div class="control-item"></div>
+              <div class="control-item"></div>
+          </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="main-title">Контактная форма</h2>
+        <div class="delimiter"></div>
+        <form id="contactform" method="post" action="#" class="contact-form">
+            <input name="name" type="text" class="col" placeholder="Ваше имя *" required>
+            <input name="email" type="email" class="col" placeholder="E-mail адрес *" required>
+            <input name="theme" type="text" class="col" placeholder="Тема сообщения">
+            <input name="phone" type="tel" class="col" placeholder="Номер телефона">
+            <textarea name="comment" class="row-col" placeholder="Сообщение *" required></textarea>
+            <span class="row-col check">
+                <input id="accept" type="checkbox" required>
+                <label for="accept">Я принимаю условия <a href="#">соглашения</a></label>
+            </span>
+            <input type="submit" id="submit" class="submit btn" value="Отправить">
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#top" class="menu-element" data-link="top">Главная</a></li>
+                <li><a href="#services" class="menu-element" data-link="services">Общее</a></li>
+                <li><a href="#portfolio" class="menu-element" data-link="portfolio">Портфолио</a></li>
+                <li><a href="#reviews" class="menu-element" data-link="reviews">Отзывы</a></li>
+                <li><a href="contacts.html" class="menu-element">Контакты</a></li>
+                <li><a href="blog.html" class="menu-element">Блог</a></li>
+                <li><a href="gallery.html" class="menu-element">Галерея</a></li>
+                <li><a href="shop.html" class="menu-element">Магазин</a></li>
+            </ul>
+        </nav>
+        <div class="brand">
+            <img src="img/fort-icon.png" alt="Логотип">
+            <span>AWESOME</span>
+        </div>
+        <div class="social">
+            <a href="#" target="_blank"><img class="social-img" src="img/social/001-facebook.png" alt="FB"></a>
+            <a href="#" target="_blank"><img class="social-img" src="img/social/004-linkedin.png" alt="IN"></a>
+            <a href="#" target="_blank"><img class="social-img" src="img/social/005-instagram.png" alt="IG"></a>
+            <a href="#" target="_blank"><img class="social-img" src="img/social/007-twitter.png" alt="TW"></a>
+            <a href="#" target="_blank"><img class="social-img" src="img/social/010-tumblr.png" alt="TB"></a>
+        </div>
+        <div class="copyright">© Very First Page 2026</div>
+    </footer>
+
+    <div id="modal-overlay">
+        <span class="close-btn">&times;</span>
+        <img id="modal-img" src="" alt="Full Image">
+    </div>
+
+  </body>
+</html>

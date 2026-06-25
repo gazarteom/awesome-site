@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог | AWESOME</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <nav id="myTopnav">
+        <img src="img/fort-icon.png" alt="Логотип сайта">
+        <div id="hamburger" class="icon">&#9776;</div>
+        <ul>
+          <li><a href="index.html" class="menu-element">Главная</a></li>
+          <li><a href="index.html#services" class="menu-element">Общее</a></li>
+          <li><a href="index.html#portfolio" class="menu-element">Портфолио</a></li>
+          <li><a href="index.html#reviews" class="menu-element">Отзывы</a></li>
+          <li><a href="contacts.html" class="menu-element">Контакты</a></li>
+          <li><a href="blog.html" class="menu-element">Блог</a></li>
+          <li><a href="gallery.html" class="menu-element">Галерея</a></li>
+          <li><a href="shop.html" class="menu-element">Магазин</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Обложка -->
+      <section id="top">
+        <img class="top-image top-image-sub" src="img/1.jpg" alt="Обложка Блога">
+      </section>
+
+      <article class="blog-article">
+        <div class="blog-container">
+          <!-- Записи блога добавляются через JS -->
+        </div>
+
+        <!-- Боковая панель -->
+        <aside class="blog-aside">
+          <!-- Поиск -->
+          <div class="aside-search">
+            <h3 class="search-title">Поиск в блоге</h3>
+            <div class="search-delimiter"></div>
+            <div class="search-form">
+              <input type="text" class="search-text" placeholder="Введите слово">
+              <input type="submit" class="search-do" value="Искать">
+            </div>
+          </div>
+
+          <!-- Популярные статьи -->
+          <div class="aside-recent">
+            <h3 class="search-title">Популярные статьи</h3>
+            <div class="search-delimiter"></div>
+
+            <div class="recent-item">
+              <p>Как мы запустили новый проект</p>
+              <span>15/06/2026</span>
+            </div>
+            <div class="recent-item">
+              <p>Тренды веб-дизайна 2026 года</p>
+              <span>02/06/2026</span>
+            </div>
+            <div class="recent-item">
+              <p>Почему важно делать адаптивную вёрстку</p>
+              <span>20/05/2026</span>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="menu-element">Главная</a></li>
+          <li><a href="index.html#services" class="menu-element">Общее</a></li>
+          <li><a href="index.html#portfolio" class="menu-element">Портфолио</a></li>
+          <li><a href="index.html#reviews" class="menu-element">Отзывы</a></li>
+          <li><a href="contacts.html" class="menu-element">Контакты</a></li>
+          <li><a href="blog.html" class="menu-element">Блог</a></li>
+          <li><a href="gallery.html" class="menu-element">Галерея</a></li>
+          <li><a href="shop.html" class="menu-element">Магазин</a></li>
+        </ul>
+      </nav>
+      <div class="brand">
+        <img src="img/fort-icon.png" alt="Логотип">
+        <span>AWESOME</span>
+      </div>
+      <div class="social">
+        <a href="#" target="_blank"><img class="social-img" src="img/social/001-facebook.png" alt="FB"></a>
+        <a href="#" target="_blank"><img class="social-img" src="img/social/004-linkedin.png" alt="IN"></a>
+        <a href="#" target="_blank"><img class="social-img" src="img/social/005-instagram.png" alt="IG"></a>
+        <a href="#" target="_blank"><img class="social-img" src="img/social/007-twitter.png" alt="TW"></a>
+        <a href="#" target="_blank"><img class="social-img" src="img/social/010-tumblr.png" alt="TB"></a>
+      </div>
+      <div class="copyright">© Very First Page 2026</div>
+    </footer>
+  </body>
+</html>
