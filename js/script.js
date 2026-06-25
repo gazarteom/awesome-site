@@ -1,50 +1,47 @@
-// Ждем полной загрузки страницы
 $(document).ready(function() {
 
-    // --- 1. МОБИЛЬНОЕ МЕНЮ ---
-    $('#hamburger').click(function() {
+    // ==================== ГАМБУРГЕР МЕНЮ ====================
+    $('#hamburger').on('click', function() {
         $('#myTopnav').toggleClass('responsive');
+        $('#myTopnav ul').toggleClass('show');
     });
 
-    // --- 2. ПЛАВНЫЙ СКРОЛЛ (обновлено под 6 лабу) ---
-    const menuList = document.querySelectorAll('.menu-element');
-
-    menuList.forEach(function(element) {
-        element.addEventListener('click', function(event) {
-            const elementLink = element.dataset.link;
-
-            if (elementLink) {
-                event.preventDefault();
-                const targetElement = document.getElementById(elementLink);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
+    // Закрывать меню при клике на ссылку (на мобильных)
+    $('#myTopnav ul li a').on('click', function() {
+        if (window.innerWidth <= 992) {
             $('#myTopnav').removeClass('responsive');
-        });
-    });
-
-    // --- 3. МОДАЛЬНОЕ ОКНО (ПОРТФОЛИО) ---
-    $('.portfolio-item').click(function() {
-        let bg = $(this).css('background-image');
-        bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
-        $('#modal-img').attr('src', bg);
-        $('#modal-overlay').fadeIn();
-    });
-
-    $('.close-btn, #modal-overlay').click(function(event) {
-        if(event.target.id !== 'modal-img') {
-            $('#modal-overlay').fadeOut();
+            $('#myTopnav ul').removeClass('show');
         }
     });
 
-    // --- 4. СЛАЙДЕР (ОТЗЫВЫ) ---
-    $('.control-item').click(function() {
-        let index = $(this).index();
-        $('.control-item').removeClass('active');
-        $(this).addClass('active');
-        $('.review-card').removeClass('active').eq(index).addClass('active');
+    // ==================== СЛАЙДЕР ОТЗЫВОВ ====================
+    let currentReview = 0;
+    const reviews = $('.review-card');
+    const controls = $('.control-item');
+
+    function showReview(index) {
+        reviews.removeClass('active');
+        controls.removeClass('active');
+
+        $(reviews[index]).addClass('active');
+        $(controls[index]).addClass('active');
+    }
+
+    // Клик по точкам управления
+    controls.on('click', function() {
+        currentReview = $(this).index();
+        showReview(currentReview);
     });
+
+    // Автопереключение отзывов (каждые 5 секунд)
+    setInterval(function() {
+        currentReview = (currentReview + 1) % reviews.length;
+        showReview(currentReview);
+    }, 5000);
+
+    // Показываем первый отзыв при загрузке
+    if (reviews.length > 0) {
+        showReview(0);
+    }
 
 });
